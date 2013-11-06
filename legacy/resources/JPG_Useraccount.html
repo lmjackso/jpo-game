@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Joint Program Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/JPGstyle.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.png" type="image/x-icon">
+  </head>
+
+  <body>
+
+    <!-- navbar ---------------------------------------------->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="JPG_Public.html">Joint Program Game</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Design Documentation <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Requirement I</a></li>
+                  <li><a href="#">Requirement II</a></li>
+                  <li><a href="#">Architecture</a></li>
+                  <li class="divider"></li>
+                  <li class="nav-header">Nav header</li>
+                  <li><a href="#">Game Manual</a></li>
+                  <li><a href="#">Game Tutorial</a></li>
+                </ul>
+              </li>
+              <li><a href="">Background</a></li>
+              <li><a href="http://www.sei.cmu.edu/acquisition/?location=secondary-nav&source=1358" target="_blank">SEI</a></li>
+              <li><a href="#" class="offset3"><i class="icon-user" style="margin-right:8px;"></i>username</a></li>
+              <li><a href="#"><i class="icon-share-alt" style="margin-right:8px;"></i>Logout</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div><!-- /navbar ---------------------------------------------->
+
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h2>Welcome Username!</h2>
+        <p><em>select the following options:</em></p>
+        <br><br>
+        <div class="accordion" id="accordion2">
+          <!---- View Account Information ---->
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                <div class="lead"><i class="user-icon-format icon-user"></i>Account Information</div>
+              </a>
+            </div>
+            <div id="collapseOne" class="accordion-body collapse">
+              <div class="accordion-inner">
+                <table class="table">
+                  <tr><th>Username:</th><td><em>username</em></td></tr>
+                  <tr><th>Email address:</th><td><em>emailaddress</em></td></tr>
+                  <tr><th>Gender:</th><td><em>male/female</em></td></tr>
+                  <tr><th>Experience:</th><td><em>amateur/professional</em></td></tr>
+                  <tr><th>Number of games played:</th><td><em>#</em></td></tr>
+                  <tr><th>Number of games finished:</th><td><em>#</em></td></tr>
+                  <tr><th>Number of games finished With JP:</th><td><em>#</em></td></tr>
+                  <tr><th>Accumulated Tokens Earned:</th><td><em>#</em></td></tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!---- View previous instances of your game ---->
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                <div class="lead"><i class="user-icon-format icon-list"></i>Previous Games Detail</div>
+              </a>
+            </div>
+            <div id="collapseTwo" class="accordion-body collapse">
+              <div class="accordion-inner">
+                <table class="table table-striped table-content-center">
+                  <th>GameID</th>
+                  <th>total players</th>
+                  <th>% Custom Reqs Achieved</th>
+                  <th>Tokens Earned</th>
+                  <th>completed with JP?</th>
+                
+                  <tr>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>23%</td>
+                    <td>200</td>
+                    <td>Yes</td>
+                  </tr>
+                  <tr>
+                    <td>14</td>
+                    <td>4</td>
+                    <td>100%</td>
+                    <td>800</td>
+                    <td>No</td>
+                  </tr>
+                   <tr>
+                    <td>23</td>
+                    <td>10</td>
+                    <td>70%</td>
+                    <td>450</td>
+                    <td>No</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!---View Compensation Received --->
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                <div class="lead"><i class="user-icon-format icon-gift"></i>Compensation</div>
+              </a>
+            </div>
+            <div id="collapseThree" class="accordion-body collapse">
+              <div class="accordion-inner">
+                <p>Click <a href="#">here </a> to redeem your credits for reward</p>
+              </div>
+            </div>
+          </div>
+          <!---View available games to join --->
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+                <div class="lead"><i class="user-icon-format icon-play-circle"></i>Play New Game</div>
+              </a>
+            </div>
+            <div id="collapseFour" class="accordion-body collapse">
+              <div class="accordion-inner">
+                Available games:<br>
+                <table class="table table-hover table-content-center">
+                  <th>GameID</th>
+                  <th># Players Needed</th>
+                  <th># Players Have</th>
+                  <th></th>
+                  <tr>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td><a class="btn btn-info-submit" href="#">Join</a></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td><a class="btn btn-info-submit" href="#">Join</a></td>
+                  </tr>
+                </table>
+                
+                No available games found...
+                <a href="JPG_Consent.html" class="offset5 btn btn-large btn-info">Create New Game</a>
+                <br>
+                Let join new game or force player to answer survey from last game...
+              </div>
+            </div>
+        </div>
+ 
+      </div>
+      
+    </div> <!-- /container -->
+
+    <!------ footer ------------------------------->
+    <hr>
+    <div class="footer navbar-static-bottom"> 
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="JPG_Privacy.html" target="_blank">Privacy</a></li>
+          <li><a href="JPG_Terms.html" target="_blank">Terms of Use</a></li>
+        </ul>		
+      </nav>
+      &copy; Carnegie Mellon University 2013
+    </div><!-- /footer -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    
+    
+    
+    
+    
+
+  </body>
+</html>

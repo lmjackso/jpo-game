@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="robots" content="noindex">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+
+	<title>JPG | Login</title>
+	<link rel="shortcut icon" href="assets/ico/favicon.png" type="image/x-icon">
+
+	<!-- Le styles -->
+	<link rel="stylesheet" href="assets/css/jquery-ui.css" type="text/css">
+	<link href="assets/css/JPGstyle.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/messi.css" type="text/css">
+	<link rel="stylesheet" href="assets/css/bootstrap-responsive.css" type="text/css">
+	<link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css">
+</head>
+
+<body>
+
+    <!-- navbar ---------------------------------------------->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="JPG_Public.html">Joint Program Game</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Design Documentation <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Game Manual</a></li>
+                  <li><a href="#">Requirement I</a></li>
+                  <li><a href="#">Requirement II</a></li>
+                  <li><a href="#">Architecture</a></li>
+                  <li class="divider"></li>
+                  <li class="nav-header">Nav header</li>
+                  <li><a href="#">Game Manual</a></li>
+                  <li><a href="#">Tutorial</a></li>
+                </ul>
+              </li>
+              <li><a href="">Background</a></li>
+              <li><a href="http://www.sei.cmu.edu/acquisition/?location=secondary-nav&source=1358" target="_blank">SEI</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div><!-- /navbar ---------------------------------------------->
+
+    <div class="centered" style="width: 400px">
+
+	<div class="box">
+	  <h2>Sign in to your account</h2>
+	  <h3>Enter your username and password to log in.</h3>
+	  <form novalidate="" class="form" action="/signin/?do=signInForm-submit" method="post" id="frm-signInForm">
+	    <!-- Rendering form errors -->	
+	    <fieldset>
+	      <div class="row-sf">
+		      <i class="icon-user"></i>
+		      <input class="login" placeholder="Username" maxlength="20" name="username" id="frmsignInForm-username" required="required" data-nette-rules="{op:':filled',msg:'You must enter your username'},{op:':pattern',msg:'Your username may only contain letters and numbers.',arg:'^[a-zA-Z0-9]+$'},{op:':minLength',msg:'Your username must be at least 4 characters long',arg:4},{op:':maxLength',msg:'Your username may not contain more than 20 characters',arg:20}" pattern="^[a-zA-Z0-9]+$" type="text">
+		      <!-- To mark the incorrectly filled input, you must add the class "error" to the input -->
+		      <!-- example: <input type="text" class="login error" name="login" value="Username" /> -->
+		      <i class="icon-lock"></i>
+		      <input class="login" placeholder="Password" maxlength="50" name="password" id="frmsignInForm-password" required="required" data-nette-rules="{op:':filled',msg:'You must enter a password'},{op:':minLength',msg:'Your password must contain at least 5 characters',arg:5},{op:':maxLength',msg:'Your password may not contain more than 50 characters',arg:50}" type="password">
+		      
+		      <!--<a class="forgot" href="http://www.unlazify.com/signin/reset">I forgot my password</a>--->
+		      
+	      </div>	
+	      <div class="row-sf">
+		      <a href="JPG_register.html">Create new account</a>
+		      <input name="login" id="frmsignInForm-login" value="Sign in" type="submit">    
+	      </div>
+	    </fieldset>
+	  </form>
+	  <em><a href="JPG_Useraccount.html">After Logged in...</a></em>
+	</div>
+	<hr>
+    </div>
+    
+    
+    
+    
+    <!------ footer ------------------------------->
+    <div class="footer navbar-static-bottom"> 
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="JPG_Privacy.html" target="_blank">Privacy</a></li>
+          <li><a href="JPG_Terms.html" target="_blank">Terms of Use</a></li>
+        </ul>			
+      </nav>
+      &copy; Carnegie Mellon University 2013
+    </div><!-- /footer -->
+
+
+
+  <script src="assets/js/ga.js" async="" type="text/javascript"></script><script src="assets/js/jquery.js"></script>
+  <script>!window.jQuery && document.write('<script src="/js/min/jquery-1.7.2.min.js"><\/script>')</script>
+  <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+  <script type="text/javascript" src="assets/js/netteForms.js"></script>
+  <script type="text/javascript" src="assets/js/jquery_002.js"></script>
+  <script type="text/javascript" src="assets/js/html5.js"></script>
+  <script type="text/javascript" src="assets/js/global.js"></script>
+  <script type="text/javascript" src="assets/js/messi.js"></script>
+  <script type="text/javascript">
+	// definition of localized strings
+	$.errorTitle = "Error";
+  </script>
+
+
+  <script type="text/javascript">
+    // Google Analytics
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-35056210-3']);
+    _gaq.push(['_setDomainName', 'unlazify.com']);
+    _gaq.push(['_trackPageview']);
+  
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+
+
+</body></html>

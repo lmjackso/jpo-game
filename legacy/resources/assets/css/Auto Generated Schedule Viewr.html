@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">   
+        <meta charset="utf-8">   
+        <title>Auto Generated Schedule Viewr</title>   
+        <meta name="description" content="Creating Modal Window with Twitter Bootstrap">  
+        <link href="Auto%20Generated%20Schedule%20Viewr_files/bootstrap.css" rel="stylesheet">
+        <link href="Auto%20Generated%20Schedule%20Viewr_files/bootstrap-responsive.css" rel="stylesheet">
+    <style>
+
+        /* GLOBAL STYLES
+        -------------------------------------------------- */
+        /* Padding below the footer and lighter body text */
+    
+        body {
+          padding-bottom: 40px;
+        }
+        .webpage-background {
+           background-image:url('assets/img/background5.jpg');
+           /*background: #81DAF5;*/ 
+        }
+        .schedule-perm-container {
+         background-position: -24px -72px;
+        }
+        
+        /* Custom container */
+        .container {
+          /*margin: 0 auto;*/
+          width: 85%;
+          color: #5a5a5a;
+        }
+        .pagination-centered {
+            width: 85%;
+            position: absolute;
+            overflow: visible;
+            background: #FFFFFF;
+            bottom: 3%;
+        }
+        .container > hr {
+          margin: 10px 0;
+        }
+            
+        #sortable-buttons .btn {
+            -webkit-transition: none;
+            box-shadow: none;
+        }
+      
+        .modal {
+            position: absolute;
+            overflow: visible; /* allow content to popup out (i.e tooltips) */
+        }
+        .embedded-pages {
+            position: absolute;
+            overflow: visible;
+        }
+        
+        /* CUSTOMIZE modal-body FOR EACH POPUP
+        -------------------------------------------------- */
+        #schedule-perm-popup .modal-body {
+            max-height: 100%;
+        }
+        
+        #personality-tab .modal-body {
+            max-height: 100%;
+        }
+        
+        /* CUSTOMIZE EACH POPUP
+        -------------------------------------------------- */
+        #schedule-perm-popup {
+            width: 88%;
+            top: 3%;
+            left: 22%;
+        }
+        
+        #personality-tab {
+            width: 22%;
+            top: 15%;
+            left: 650px;
+        }
+        #academic-history-tab {
+            top: 15%;
+            left: 850px;
+            right: 0px;
+        }
+        #hard-constraint-tab {
+            top: 15%;
+            left: 1150px;
+            right: 0px;
+        }
+        
+    
+        
+        /* Customize the navbar links to be fill the entire space of the .navbar */
+        .navbar .navbar-inner {
+          padding: 0;
+        }
+        .navbar .nav {
+          margin: 0;
+          display: table;
+          width: 100%;
+        }
+        .navbar .nav li {
+          display: table-cell;
+          width: 1%;
+          float: none;
+        }
+        .navbar .nav li a {
+          font-weight: bold;
+          text-align: center;
+          border-left: 1px solid rgba(255,255,255,.75);
+          border-right: 1px solid rgba(0,0,0,.1);
+        }
+        .navbar .nav li:first-child a {
+          border-left: 0;
+          border-radius: 3px 0 0 3px;
+        }
+        .navbar .nav li:last-child a {
+          border-right: 0;
+          border-radius: 0 3px 3px 0;
+        }
+      
+        /* CLASS MATCH STYLE
+        -------------------------------------------------- */  
+        .show-all-classes {
+            height: 550px;
+            max-height: 100%;
+        }
+        
+        .display-matched-classes {
+            margin-left: 100;
+        }
+        
+        .class-match-wrapper {
+            max-width: 100%;
+            
+        }
+        .class-checkbox {
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+        .expand-collapse-button {
+            font-size: 150%;
+            color: red;
+            float: left;
+            padding-right: 8px;
+            cursor: pointer;
+        }
+        
+        .class-match {
+            font-size: 150%;
+            color: blue;
+            float:left;
+        }
+        .class-info {
+            font-size: 120%;
+            color: green;
+            float:left;
+            text-align:left;
+            max-width: 600px;
+            border: 0px solid gray;
+            padding-left: 30px;
+            padding-top: 10px;
+            padding-right: 0px;
+            display: none;
+        }
+    
+    
+    
+    
+        /* CUSTOMIZE THE CAROUSEL
+        -------------------------------------------------- */
+        /* Carousel base class */
+        .carousel {
+          margin-bottom: 60px;
+        }
+    
+        .carousel .container {
+          position: relative;
+          z-index: 9;
+        }
+    
+        .carousel-control {
+          height: 80px;
+          margin-top: 0;
+          font-size: 120px;
+          text-shadow: 0 1px 1px rgba(0,0,0,.4);
+          background-color: transparent;
+          border: 0;
+          z-index: 10;
+        }
+    
+        .carousel .item {
+          height: 500px;
+        }
+        .carousel img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          min-width: 100%;
+          height: 100%;
+        }
+    
+        .carousel-caption {
+          background-color: transparent;
+          position: static;
+          max-width: 550px;
+          padding: 0 20px;
+          margin-top: 200px;
+        }
+        .carousel-caption h1,
+        .carousel-caption .lead {
+          margin: 0;
+          line-height: 1.25;
+          color: #fff;
+          text-shadow: 0 1px 1px rgba(0,0,0,.4);
+        }
+        .carousel-caption .btn {
+      margin-top: 10px;
+    }
+
+    </style>
+            
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="file:///Users/shaoween232/Documents/WebAppWorkSpace/ScheduleGenerator_view/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="file:///Users/shaoween232/Documents/WebAppWorkSpace/ScheduleGenerator_view/assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="file:///Users/shaoween232/Documents/WebAppWorkSpace/ScheduleGenerator_view/assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="file:///Users/shaoween232/Documents/WebAppWorkSpace/ScheduleGenerator_view/assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="file:///Users/shaoween232/Documents/WebAppWorkSpace/ScheduleGenerator_view/assets/ico/favicon.png">                   
+<style type="text/css" id="holderjs-style">.holderjs-fluid {font-size:16px;font-weight:bold;text-align:center;font-family:sans-serif;margin:0}</style></head>  
+<body class="webpage-background">
+    <div class="container">           
+        <!-- nav-Bar: masthead
+        ================================================== --> 
+        <div class="masthead">
+            <div class="webpage-background">
+                <h3 class="span8 muted">Automated Schedule Generator</h3>
+                <!-- help-button
+                ================================================== --> 
+                <div id="help-button" class="modal hide fade in">
+                    <div class="modal-header">
+                        <a class="close" data-dismiss="modal">Close</a>
+                        <h3>Personality survey form in here</h3>
+                    </div>  
+                    <div class="modal-body">  
+                        <h4>Text in a modal</h4>  
+                    </div>  
+                    <div class="modal-footer">  
+                        <a href="#" data-dismiss="modal" class="btn btn-success">Call to action</a>  
+                        <a href="#" class="btn" data-dismiss="modal">Close</a>  
+                    </div>
+                </div><!-- end of help-button-->
+                <h4 class="span1 offset4 btn-link" data-toggle="modal" href="#help-button">Help</h4>
+                <h4 class="span1 btn-link">logout</h4>
+            
+            </div>
+            <!-- navagation bar
+                ================================================== -->   
+            <div class="navbar navbar-inverse">  
+                <div class="navbar-inner">
+                    <div class="container" style="width: auto;">
+                        <ul class="nav" role="navigation">
+                            <li class="dropdown">  
+                                <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                                    All Generated Schedules
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                                  <li role="presentation">
+                                    <a role="menuitem" href="file:///Users/shaoween232/Documents/WebAppWorkSpace/ScheduleGenerator_view/autogen-schedule.html">New Schedule</a>
+                                  </li>
+                                  <li role="presentation">
+                                    <a role="menuitem" data-toggle="modal" style="color:#888888;" href="#schedule-perm-popup">Schedule1</a>
+                                  </li>  
+                                  <li role="presentation">
+                                    <a role="menuitem" data-toggle="modal" style="color:#888888;" href="#schedule-perm-popup">Schedule2</a>
+                                  </li>
+                                  <li role="presentation">
+                                    <a role="menuitem" data-toggle="modal" style="color:#888888;" href="#schedule-perm-popup">Schedule3</a>
+                                  </li>
+                                  <li role="presentation">
+                                    <a role="menuitem" data-toggle="modal" style="color:#888888;" href="#schedule-perm-popup">Schedule4</a>
+                                  </li>
+                                  <li role="presentation">
+                                    <a role="menuitem" data-toggle="modal" style="color:#888888;" href="#schedule-perm-popup">Schedule5</a>
+                                  </li> 
+                                </ul>
+                                
+                            </li>  
+                            <li><a role="button" data-toggle="modal" href="#personality-tab">Your Personality</a></li>
+                            <li><a data-toggle="modal" href="#academic-history-tab">Your Academic History</a></li>
+                            <li><a data-toggle="modal" href="#hard-constraint-tab">Your Hard Constraints</a></li> 
+                            <li><a href="file:///Users/shaoween232/Documents/WebAppWorkSpace/ScheduleGenerator_view/discussion-forum.html">Discussion Forum</a></li>
+                        </ul>                 
+                    </div><!-- end of container -->
+            
+                </div><!-- end of navbar-inner -->
+            </div><!-- end of navbar-->
+        </div><!-- end of masthead -->
+        
+        <!-- middle content
+        ================================================== -->           
+        <div class="pagination-centered">
+            
+            
+            <h2>Here are the list of your last 5 schedule sets</h2>  
+            <!-- link to view a set of schedules
+            ================================================== -->
+            <p><a data-toggle="modal" href="#schedule-perm-popup" class="btn-link">View Automated Schedule</a></p>
+        
+            <!-- Backward and Forward Button
+            ================================================== -->
+            <ul class="pager">
+                <li class="previous"><a href="#">← Back</a></li>
+                <li class="next"><a href="#">Next →</a></li>
+            </ul><!-- /end of Backward and Forward Button -->
+
+
+        <div class="show-all-classes">
+            <!-- display-matched-classes
+            ================================================== -->
+                <div class="row">
+                    <!-- able-classes
+                    ================================================== -->
+                    <div class="span7">
+                        <h1>things on left</h1>
+                        <table class="class-matches">
+                            <tbody><tr>
+                                <td>        
+                                    <div class="class-match-wrapper">
+                                        <div id="show-more-toggle-0" class="expand-collapse-button"> [+] </div>
+                                        <div class="class-match">Class 1
+                                            <input checked="checked" value="" type="checkbox">
+                                        </div> 
+                                    </div>
+                                    <div id="more-info-0" class="class-info">
+                                        
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nibh.
+                                            Nunc varius facilisis eros. Sed erat. In in velit quis arcu ornare laoreet.
+                                            Curabitur adipiscing luctus massa. Integer ut purus ac augue commodo commodo.
+                                            Nunc nec mi eu justo tempor consectetuer. Etiam vitae nisl. In dignissim lacus ut
+                                            ante. Cras elit lectus, bibendum a, adipiscing vitae, commodo et, dui. Ut tincidunt
+                                            tortor. Donec nonummy, enim in lacinia pulvinar, velit tellus scelerisque augue, ac
+                                            posuere libero urna eget neque. Cras ipsum. Vestibulum pretium, lectus nec venenatis
+                                            volutpat,purus lectus ultrices risus, a condimentum risus mi et quam. Pellentesque
+                                            auctor fringilla neque.Duis eu massa ut lorem iaculis vestibulum. Maecenas facilisis
+                                            elit sed justo. Quisque volutpat malesuada velit.
+                                        
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="class-match-wrapper">
+                                        <div id="show-more-toggle-1" class="expand-collapse-button"> [+] </div>
+                                        <div class="class-match">Class 2
+                                            <input checked="checked" value="" type="checkbox">
+                                        </div>         
+                                    </div>
+                                
+                                    <div id="more-info-1" class="class-info">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nibh.
+                                            Nunc varius facilisis eros. Sed erat. In in velit quis arcu ornare laoreet.
+                                            Curabitur adipiscing luctus massa. Integer ut purus ac augue commodo commodo.
+                                            Nunc nec mi eu justo tempor consectetuer. Etiam vitae nisl. In dignissim lacus ut
+                                            ante. Cras elit lectus, bibendum a, adipiscing vitae, commodo et, dui. Ut tincidunt
+                                            tortor. Donec nonummy, enim in lacinia pulvinar, velit tellus scelerisque augue, ac
+                                            posuere libero urna eget neque. Cras ipsum. Vestibulum pretium, lectus nec venenatis
+                                            volutpat,purus lectus ultrices risus, a condimentum risus mi et quam. Pellentesque
+                                            auctor fringilla neque.Duis eu massa ut lorem iaculis vestibulum. Maecenas facilisis
+                                            elit sed justo. Quisque volutpat malesuada velit.
+                                        </p>
+                                    </div>             
+                                </td>
+                            </tr> 
+                        </tbody></table>
+                    </div>                    
+                    <!-- unable-classes
+                    ================================================== -->
+                    <div class="span7">
+                        <h1>things on right</h1>
+                        <table class="class-matches">
+                            <tbody><tr>
+                                <td>        
+                                    <div class="class-match-wrapper">
+                                        <div id="show-more-toggle-0" class="expand-collapse-button"> [+] </div>
+                                        <div class="class-match">Class 3</div>         
+                                    </div>
+                                    <div id="more-info-0" class="class-info">
+                                        <p>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nibh.
+                                    Nunc varius facilisis eros. Sed erat. In in velit quis arcu ornare laoreet.
+                                    Curabitur adipiscing luctus massa. Integer ut purus ac augue commodo commodo.
+                                    Nunc nec mi eu justo tempor consectetuer. Etiam vitae nisl. In dignissim lacus ut
+                                    ante. Cras elit lectus, bibendum a, adipiscing vitae, commodo et, dui. Ut tincidunt
+                                    tortor. Donec nonummy, enim in lacinia pulvinar, velit tellus scelerisque augue, ac
+                                    posuere libero urna eget neque. Cras ipsum. Vestibulum pretium, lectus nec venenatis
+                                    volutpat,purus lectus ultrices risus, a condimentum risus mi et quam. Pellentesque
+                                    auctor fringilla neque.Duis eu massa ut lorem iaculis vestibulum. Maecenas facilisis
+                                    elit sed justo. Quisque volutpat malesuada velit.
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="class-match-wrapper">
+                                        <div id="show-more-toggle-1" class="expand-collapse-button"> [+] </div>
+                                        <div class="class-match">Class 4</div>         
+                                    </div>
+                                
+                                    <div id="more-info-1" class="class-info">
+                                    <p>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nibh.
+                                    Nunc varius facilisis eros. Sed erat. In in velit quis arcu ornare laoreet.
+                                    Curabitur adipiscing luctus massa. Integer ut purus ac augue commodo commodo.
+                                    Nunc nec mi eu justo tempor consectetuer. Etiam vitae nisl. In dignissim lacus ut
+                                    ante. Cras elit lectus, bibendum a, adipiscing vitae, commodo et, dui. Ut tincidunt
+                                    tortor. Donec nonummy, enim in lacinia pulvinar, velit tellus scelerisque augue, ac
+                                    posuere libero urna eget neque. Cras ipsum. Vestibulum pretium, lectus nec venenatis
+                                    volutpat,purus lectus ultrices risus, a condimentum risus mi et quam. Pellentesque
+                                    auctor fringilla neque.Duis eu massa ut lorem iaculis vestibulum. Maecenas facilisis
+                                    elit sed justo. Quisque volutpat malesuada velit.
+                                    </p>
+                                    </div>           
+                                </td>
+                            </tr> 
+                        </tbody></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+         
+    </div><!-- end of container -->
+    
+    <!-- personality-tab
+    ================================================== -->      
+    <div id="personality-tab" class="modal hide fade in" tabindex="-1" data-backdrop="static">  
+        <div class="modal-header">  
+          <a class="close" data-dismiss="modal">Close</a>  
+          <h3>Sort based on importance to you</h3>  
+        </div>  
+        <div class="modal-body">  
+            <h4>
+            
+            <!-- drag things up and down
+            ================================================== -->
+            <ol style="" class="ui-sortable" id="sortable-buttons">
+                <li style=""><a class="btn">Hours Per Week</a></li>
+                <li style=""><a class="btn">Interested in student learning</a></li>
+                <li style=""><a class="btn">Clear Learning Goals</a></li>
+                <li style=""><a class="btn">Feedback to Students</a></li>
+                <li style=""><a class="btn">Importance of Subject</a></li>
+                <li style=""><a class="btn">Explains Subject Matter</a></li>
+                <li style=""><a class="btn">Show Respect For Students</a></li>
+                <li style=""><a class="btn">Explains Subject Matter</a></li>
+                <li style=""><a class="btn">Overall Teaching</a></li>
+                <li style=""><a class="btn">Overall Course</a></li>    
+            </ol>
+            
+            </h4>
+            
+        </div>  
+        <div class="modal-footer">  
+            <a href="#" data-dismiss="modal" class="btn btn-success">Submit</a>
+        </div>  
+    </div><!-- end of personal-tab-->
+        
+    <!-- academic-history-tab
+    ================================================== -->
+
+    <div id="academic-history-tab" class="modal hide fade" tabindex="-1" data-backdrop="static">  
+        <div class="modal-header">  
+          <a class="close" data-dismiss="modal">Close</a>  
+          <h3>Academic History Survey in here</h3>  
+        </div>  
+        <div class="modal-body">  
+            <h4>Text in a modal</h4>  
+        </div>  
+        <div class="modal-footer">  
+            <a href="#" class="btn btn-success">Call to action</a>  
+            <a href="#" class="btn" data-dismiss="modal">Close</a>  
+        </div>  
+    </div><!-- end of academic-history-tab-->
+    
+    <!-- hard-constraint-tab
+    ================================================== -->
+    <div id="hard-constraint-tab" class="modal hide fade in" tabindex="-1" data-backdrop="static">  
+        <div class="modal-header">  
+          <a class="close" data-dismiss="modal">Close</a>  
+          <h3>Hard Constraint Form in here</h3>  
+        </div>  
+        <div class="modal-body">  
+            <h4>Text in a modal</h4>  
+        </div>  
+        <div class="modal-footer">  
+            <a href="#" class="btn btn-success">Call to action</a>  
+            <a href="#" class="btn" data-dismiss="modal">Close</a>  
+        </div>  
+    </div><!-- end of hard-constraint-tab-->  
+        
+    
+    <!-- schedule-perm-popup
+    ================================================== -->
+    <div id="schedule-perm-popup" class="modal hide fade">      
+        <div class="modal-header">  
+          <a class="close" data-dismiss="modal">Close</a>  
+          <h3>This is a Modal Heading</h3>  
+        </div>  
+        <div class="modal-body">  
+            <h4>Text in a modal</h4>  
+            <!-- Carousel
+            ================================================== -->
+            <div id="myCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="item active left">
+                        <img src="Auto%20Generated%20Schedule%20Viewr_files/slide-01.jpg" alt="">
+                            <div class="modal-body">
+                                <div class="carousel-caption">
+                                    <h1>Example headline.</h1>
+                                    <p class="lead">Cras justo odio, 
+dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta 
+gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id 
+elit.</p>
+                                    <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+                                </div>
+                            </div>
+                        
+                    </div>
+                    <div class="item next left">
+                        <img src="Auto%20Generated%20Schedule%20Viewr_files/slide-02.jpg" alt="">
+                            <div class="modal-body">
+                                <div class="carousel-caption">
+                                    <h1>Another example headline.</h1>
+                                    <p class="lead">Cras justo odio, 
+dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta 
+gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id 
+elit.</p>
+                                    <a class="btn btn-large btn-primary" href="#">Learn more</a>
+                                </div>
+                            </div>
+                        
+                    </div>
+                    <div class="item">
+                        <img src="Auto%20Generated%20Schedule%20Viewr_files/slide-03.jpg" alt="">
+                            <div class="modal-body">
+                                <div class="carousel-caption">
+                                    <h1>One more for good measure.</h1>
+                                    <p class="lead">Cras justo odio, 
+dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta 
+gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id 
+elit.</p>
+                                    <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
+                                </div>
+                            </div>
+                        
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+            </div><!-- /.carousel -->
+            <!-- Number Navigation Bar in Popup
+            ================================================== -->
+            <div class="pagination pagination-centered">
+                <ul>
+                  <li class="active"><a href="#">1</a></li>
+                  <li class="active"><a href="#">2</a></li>
+                  <li class="active"><a href="#">3</a></li>
+                  <li class="active"><a href="#">4</a></li>
+                  <li class="active"><a href="#">5</a></li>
+                  <li class="active"><a href="#">6</a></li>
+                  <li class="active"><a href="#">7</a></li>
+                  <li class="active"><a href="#">8</a></li>
+                  <li class="active"><a href="#">9</a></li>
+                  <li class="active"><a href="#">10</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="modal-footer">  
+            <a href="#" class="btn btn-success">Call to action</a>  
+            <a href="#" class="btn" data-dismiss="modal">Close</a>
+        </div>
+    </div><!-- /end of schedule-perm-popup -->
+            
+
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->    
+    <script type="text/javascript" src="Auto%20Generated%20Schedule%20Viewr_files/jquery_002.js"></script>
+    <script type="text/javascript" src="Auto%20Generated%20Schedule%20Viewr_files/jquery-ui.js"></script>
+    <script src="Auto%20Generated%20Schedule%20Viewr_files/jquery.js"></script>
+    <script src="Auto%20Generated%20Schedule%20Viewr_files/bootstrap-transition.js"></script>
+    <script src="Auto%20Generated%20Schedule%20Viewr_files/bootstrap-alert.js"></script>
+    <script src="Auto%20Generated%20Schedule%20Viewr_files/bootstrap-modal.js"></script>
+    <script src="Auto%20Generated%20Schedule%20Viewr_files/bootstrap-dropdown.js"></script>
+    <script src="Auto%20Generated%20Schedule%20Viewr_files/bootstrap-scrollspy.js"></script>
+    <script src="Auto%20Generated%20Schedule%20Viewr_files/bootstrap-tab.js"></script>
+    <script src="Auto%20Generated%20Schedule%20Viewr_files/bootstrap-tooltip.js"></script>
+    <script src="Auto%20Generated%20Schedule%20Viewr_files/bootstrap-popover.js"></script>
+    <script src="Auto%20Generated%20Schedule%20Viewr_files/bootstrap-button.js"></script>
+    <script src="Auto%20Generated%20Schedule%20Viewr_files/bootstrap-collapse.js"></script>
+    <script src="Auto%20Generated%20Schedule%20Viewr_files/bootstrap-carousel.js"></script>
+    <script src="Auto%20Generated%20Schedule%20Viewr_files/bootstrap-typeahead.js"></script>
+    <script src="Auto%20Generated%20Schedule%20Viewr_files/holder.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    
+      $(document).ready(function(){
+          $("#show-more-toggle-0").click(function(){
+          $("#more-info-0").slideToggle();
+          $(this).html = "[-]";
+          });
+      
+          $("#show-more-toggle-1").click(function(){
+          $("#more-info-1").slideToggle();
+         });
+       });
+    </script>
+        
+    <script type="text/javascript" src="Auto%20Generated%20Schedule%20Viewr_files/jquery_002.js"></script>
+    <script type="text/javascript" src="Auto%20Generated%20Schedule%20Viewr_files/jquery-ui.js"></script>
+    <script type="text/javascript">
+      $(window).load(function(){
+      $(function () {
+          $('#sortable-buttons').sortable();
+      });
+      }); 
+    
+    </script>
+    <script type="text/javascript">
+        $(window).load(function(){
+         document.getElementById("forum_embed").src =
+          "https://groups.google.com/forum/embed/?place=forum/autogen-schedule" +
+          "&showsearch=true&showpopout=true&amp;parenturl=" +
+          encodeURIComponent(window.location.href);
+        });
+    </script>
+  
+              
+          
+        
+            
+  
+  
+           </body></html>

@@ -1,0 +1,330 @@
+
+
+/********** GLOBAL **********/
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  font-family:Arial,Helvetica,sans-serif;
+  /*background-color:#7f7f7f;*/
+}
+
+input {
+    font-family: Arial,Helvetica,sans-serif;
+    color: rgb(89, 89, 89);
+    font-size: 18px;
+}
+
+
+/******** BODY CONTENT ***********/
+.box {
+    width:370px;
+    overflow:hidden;
+    padding:15px;
+    background:#fff;
+    border:1px solid #d5d5d5;
+    border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    box-shadow:0 0 20px rgba(3,44,52,.22);
+    -moz-box-shadow:0 0 20px rgba(3,44,52,.22);
+    -webkit-box-shadow:0 0 20px rgba(3,44,52,.22)
+}
+
+.box h2 {
+    color:#292929;
+    font-size:25px;
+    line-height:30px;
+    margin:0;padding:0 0 10px 0;
+    font-weight:bold;outline:0
+}
+    
+.box h3 {
+    color:#7f7f7f;
+    font-size:17px;
+    line-height:20px;
+    margin:0;
+    padding:0;
+    font-weight:normal;
+    outline:0
+}
+
+.container-regform {
+    width:620px;
+    overflow:hidden;
+    padding:15px;
+    background:#fff;
+    border:1px solid #d5d5d5;
+    border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    box-shadow:0 0 20px rgba(3,44,52,.22);
+    -moz-box-shadow:0 0 20px rgba(3,44,52,.22);
+    -webkit-box-shadow:0 0 20px rgba(3,44,52,.22)
+}
+
+.content-container {
+  overflow:hidden;
+  padding:10px 20px 10px 20px;
+  margin-top:20px;
+  margin-bottom:20px;
+  background:#fff;
+  border:1px solid #d5d5d5;
+  border-radius:10px;
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+  box-shadow:0 0 20px rgba(3,44,52,.22);
+  -moz-box-shadow:0 0 20px rgba(3,44,52,.22);
+  -webkit-box-shadow:0 0 20px rgba(3,44,52,.22)
+}
+
+.game-intro {
+  overflow:auto;
+  height: 400px;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.intro-unit {  
+  /*height: 700px;*/
+  /*overflow:auto;*/
+  padding-top: 20px;
+  padding-left: 60px;
+  padding-right: 60px;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  color: inherit;
+  background-color: #eeeeee;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+
+.centered {margin:0 auto}
+
+.footer {
+  width: 100%;
+  height: 10px;
+  /*margin-top: 30px;
+  margin-bottom: 30px;*/
+  text-align: center;
+}
+.footer-nav ul { list-style-type:none; padding-left:18%; }
+.footer-nav ul li { float:left; padding:0 5px; }
+.footer-nav ul li:after { content:"|"; padding-left:10px; }
+.footer-nav ul li:last-child:after { content:""; }
+
+article { width:620px; padding:15px 0 0;}
+hgroup { margin-right:20px;}
+
+.accordion-inner { padding-left:30px; }
+
+.table-content-center td { text-align: center; }
+
+.table-content-center th { text-align: center; }
+
+.user-icon-format {
+  position:relative;
+  right:6px;
+  top:4px;
+}
+
+/********** FORM ELEMENTS ***********/
+.form {
+    margin:0;
+    padding:0
+}
+
+.form fieldset {
+    border:none;
+    padding:10px 0 0;
+    margin:0
+}
+
+.form h4 {
+  font-size:25px;
+  font-weight: normal;
+  color:#063b82;
+  line-height:33px;
+  margin-bottom:15px;
+}
+
+.form .row-sf {
+    margin-bottom: 20px;
+    /*margin-bottom:6px;
+    position:relative;
+    line-height:33px*/
+}
+.form .row-sf input.login {
+    /*width:355px;*/
+    width:325px;
+    margin-left:10px;
+    /*padding:1px 5px 1px 45px*/
+}
+
+.form .row-sf i.icon-lock {
+  position:relative;
+}
+
+.form .row-sf i.icon-user {
+  position:relative;
+}
+
+.form .row-sf a.forgot {
+  /*position:absolute;
+  top:2px;
+  right:10px;*/
+  position: absolute;
+  right:10px;
+  color:#909090;
+  font-size:12px;
+  text-shadow:1px 1px 1px #fff
+}
+
+.form .row-sf a.forgot:hover {
+  color:#6e6e6e;
+  text-decoration:none
+}
+
+
+.form .row-sf input.register {
+    width:290px;
+    /*padding:1px 5px 1px 45px*/
+}
+
+.form .item{
+  width:300px;
+  float:left;
+  margin-right:16px;
+}
+.form .last {
+  margin:0 !important;
+}
+
+/** form inputs **/
+
+.form .row-sf input[type="text"], .form .row-sf input[type="password"] {
+    height:33px;
+    line-height:33px;
+    border:1px solid #c5c5c5;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    box-shadow:0 0 5px rgba(0,0,0,.1),0 2px 2px rgba(0,0,0,.1) inset;
+    -moz-box-shadow:0 0 5px rgba(0,0,0,.1),0 2px 2px rgba(0,0,0,.1) inset;
+    -webkit-box-shadow:0 0 5px rgba(0,0,0,.1),0 2px 2px rgba(0,0,0,.1) inset
+}
+
+.form .row-sf input[type="text"]:focus,.form .row-sf input[type="text"]:hover,.form .row-sf input[type="password"]:focus,.form .row-sf input[type="password"]:hover {
+    border:1px solid #b8d564;
+    box-shadow:0 0 5px #b8d564,0 2px 2px rgba(0,0,0,.1) inset;
+    -moz-box-shadow:0 0 5px #b8d564,0 2px 2px rgba(0,0,0,.1) inset;
+    -webkit-box-shadow:0 0 5px #b8d564,0 2px 2px rgba(0,0,0,.1) inset
+}
+
+
+.form .row-sf input.error {
+  border:1px solid #eb9393;
+  box-shadow:0 0 5px #f7c4c4;
+  -moz-box-shadow:0 0 5px #f7c4c4;
+  -webkit-box-shadow:0 0 5px #f7c4c4;background-color:#fce4e4
+}
+
+
+.form input[type="checkbox"], .form .row-sf input[type="radio"] { display:block; float:left; margin: 10px 7px 10px 0; }
+
+/** sumit button **/
+.form .row-sf input[type="submit"] {
+  cursor:pointer;
+  color:#1c464e;
+  text-shadow:1px 1px 0 #aaeaf7;
+  border:1px solid #289cb8;
+  border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  background:#67bbcf;
+  background:-webkit-gradient(linear,bottom,top,from(#67bbcf),to(#82def1));
+  background:-moz-linear-gradient(bottom,#67bbcf,#82def1);
+  font-size:16px;
+  padding:5px 20px;
+  font-weight:bold;
+  float:right
+}
+
+.form .row-sf input[type="submit"]:hover{
+    color:#1c464e;
+    background:#51b1c7;
+    background:-webkit-gradient(linear,bottom,top,from(#4297ab),to(#60cce3));
+    background:-moz-linear-gradient(bottom,#4297ab,#60cce3)
+}
+
+.form input[type="submit"] {
+  cursor:pointer;
+  color:#1c464e;
+  margin-right:20px;
+  text-shadow:1px 1px 0 #aaeaf7;
+  border:1px solid #289cb8;
+  border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  background:#67bbcf;
+  background: -webkit-gradient(linear, center bottom, center top, from(#67bbcf), to(#82def1));
+  background: -moz-linear-gradient(bottom,  #67bbcf,  #82def1);
+  font-size:16px;
+  padding:5px 20px;
+  font-weight:bold;
+  float:right;
+}
+
+.form input[type="submit"]:hover {
+  background:#51b1c7;
+  background: -webkit-gradient(linear, center bottom, center top, from(#4297ab), to(#60cce3));
+  background: -moz-linear-gradient(bottom, #4297ab, #60cce3);
+}
+
+.btn-info {
+  color:#1c464e;
+  background:#67bbcf;
+  border:1px solid #289cb8;
+  font-weight:bold;
+}
+.btn-info-submit {
+  cursor:pointer;
+  color:#1c464e;
+  text-shadow:1px 1px 0 #aaeaf7;
+  border:1px solid #289cb8;
+  border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  background:#67bbcf;
+  background:-webkit-gradient(linear,bottom,top,from(#67bbcf),to(#82def1));
+  background:-moz-linear-gradient(bottom,#67bbcf,#82def1);
+  font-size:16px;
+  padding:5px 20px;
+  font-weight:bold; 
+}
+
+.btn-info:hover {
+  color:#1c464e;
+  background:#51b1c7;
+  background:-webkit-gradient(linear,bottom,top,from(#4297ab),to(#60cce3));
+  background:-moz-linear-gradient(bottom,#4297ab,#60cce3)
+}
+
+.btn-info-submit:hover {
+  background:#51b1c7;
+  background: -webkit-gradient(linear, center bottom, center top, from(#4297ab), to(#60cce3));
+  background: -moz-linear-gradient(bottom, #4297ab, #60cce3);
+}
+
+/** form aux **/
+.form p.hint { margin-top: -10px; color:#b0b0b0; font-size:12px;}
+.form label { color:#595959; font-size:16px; display:block; float:left; padding-bottom:9px; width:100%; cursor:default;}
+.form label em { color:#e33636; font-weight:bold; margin-left:3px; }
+.form label a { color:#0071b9;}
+.form label .tooltip { display:block; float:right; margin-right:5px; width:17px; height:17px; background:url(../images/tooltip.png) no-repeat;}
+.form .inner_labels label { padding:7px 15px 7px 0; width:auto;}
+.form .item span.label { width:100%; line-height:normal; margin-bottom:10px;}
+.copy{float:right;color:#9eabae;font-size:12px;margin:10px 16px 0 0;text-shadow:1px 1px 1px #fff}
