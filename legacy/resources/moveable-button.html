@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <style>
+      #sortable-buttons .btn {
+         -webkit-transition: none;
+         box-shadow: none;
+     }
+  </style>
+  
+</head>
+
+<body>
+  <div>
+    <p>Much better!</p>
+  </div>
+  <div id="sortable-buttons"> <a class="btn">Button 1</a>
+    <a class="btn">Button 2</a>
+    <a class="btn">Button 3</a>
+    <a class="btn">Button 4</a>
+    <a class="btn">Button 5</a>
+    <a class="btn">Button 6</a>
+  </div>
+<script src="http://code.jquery.com/ui/1.7.2/jquery-ui.js"></script>
+<script>
+  
+  
+  
+    $(document).ready(function () {
+      $('#sortable-buttons').sortable();
+    });
+    
+</script>
+ 
+</body>
+</html>
+
+
+
